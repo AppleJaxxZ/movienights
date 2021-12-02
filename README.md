@@ -1,3 +1,9 @@
+This repo is missing all of the started git commits due to an error on my end of force pushing into the origonal repo before fetching.  After a few days of rebuilding this site I have finally deployed it again as the working version.  I will be doing alot of updates now on this project as of 12/1/2021.  All further git commits will be in this repository.  Again, im leaving up the broken version in repo "officalmoviesapp" just to show the git history and see how the site came along.  Enjoy!
+
+This is a Peacock.Tv inspired movie website that shows you where to watch and/or download all of your favorite movies.  You can find them here on MovieKnight!
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
