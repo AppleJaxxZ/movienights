@@ -1,0 +1,57 @@
+.flex-navlist {
+    font-weight: bold;
+    padding-bottom: 2rem;
+    list-style: none;
+    &li {
+      list-style: none;
+      padding: 0.5rem;
+    }
+  
+    &li:hover {
+      transform: scale(1.1);
+      cursor: pointer;
+    }
+  }
+  
+  .signedIn-navbar {
+    display: flex;
+    justify-content: space-evenly;
+    &li:hover {
+      cursor: pointer;
+    }
+  }
+  
+  .signInSignUp {
+    display: block;
+    background-color: black;
+    color: #c6c6c6;
+    border: 2px solid #c6c6c6;
+    height: 5rem;
+    width: 12rem;
+    border-radius: 8px;
+    text-align: center;
+    padding-top: 1.7rem;
+    font-size: 1.1rem;
+    margin-left: 60vw;
+  
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .flex-navlist {
+      flex-direction: column;
+      align-items: flex-start;
+      align-content: flex-starts;
+      margin-top: 20px;
+      margin: 0px;
+      padding: 0px;
+    }
+  
+    .signInSignUp {
+      height: 3rem;
+      width: 10.5rem;
+      padding-top: 0.5rem;
+    }
+  }

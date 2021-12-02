@@ -1,25 +1,56 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import { Switch, Route } from "react-router-dom";
+import Navbar from "./components/Navbar/Navbar.components";
+import Header from "./components/Header/Header.components";
+import TrendingPage from "./Pages/Trending/Trending.page";
+import SearchPage from "./Pages/Search/Search.pages";
+import UpcommingPage from "./Pages/Upcomming/Upcomming.page";
+import HomePage from "./Pages/Home/Home.pages";
+import SignInAndSignUpPage from "./Pages/SignInAndSignUp/SignInAndSignUpPage.components";
+import { auth } from "./firebase/firebase.utils";
+class App extends React.Component {
+  constructor() {
+    super();
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    this.state = {
+      currentUser: null,
+    };
+  }
+
+  unsubscribeFromAuth = null;
+
+  componentDidMount() {
+    this.unsubscribeFromAuth = auth.onAuthStateChanged((user) => {
+      this.setState({ currentUser: user });
+
+      console.log(user);
+    });
+  }
+
+  componentWillUnmount() {
+    this.unsubscribeFromAuth();
+  }
+  render() {
+    return (
+      <div className="App">
+        <Header />
+        <Navbar currentUser={this.state.currentUser} />
+
+        <Switch>
+          <Route exact path="/" component={HomePage} />
+          <Route path="/trending" component={TrendingPage} />
+          <Route path="/upcomming" component={UpcommingPage} />
+          <Route exact path="/search" component={SearchPage} />
+          <Route
+            exact
+            path="/signinandsignup"
+            component={SignInAndSignUpPage}
+          />
+        </Switch>
+      </div>
+    );
+  }
 }
 
 export default App;

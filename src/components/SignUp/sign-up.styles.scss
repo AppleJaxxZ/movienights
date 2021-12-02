@@ -1,0 +1,17 @@
+.sign-up {
+    display: flex;
+    flex-direction: column;
+    width: 380px;
+    margin-top: 10px;
+  
+    .title {
+      margin: 10px 0;
+    }
+  }
+  
+  #signUpbtn {
+    background-color: gold;
+    color: black;
+    border: none;
+    border-radius: 8px;
+  }
