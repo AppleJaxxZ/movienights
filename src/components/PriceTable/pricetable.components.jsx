@@ -1,7 +1,6 @@
 import React from 'react';
 import { Table } from 'react-bootstrap';
 import './pricetable.styles.scss';
-import '../../config.json'
 // import 'bootstrap/dist/css/bootstrap.min.css';
 
 
