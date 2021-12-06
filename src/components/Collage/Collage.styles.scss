@@ -35,3 +35,44 @@
       top: 25%;
     }
   }
+
+  .collage__input-flex-container {
+   display: flex;
+   flex-direction: row;
+   border-radius: 6px;
+   justify-content:center;
+   justify-content: space-between;
+   margin-top: 2rem;
+  
+  
+   
+  
+   justify-content: center;
+
+   
+  }
+  .collage__input{
+    border-radius: 6px;
+    font-size: 2rem;
+    line-height: 18px;
+    width: 39rem;
+    height: 4rem;
+    border: 0;
+    outline: none;
+   
+    
+}
+
+.collage__signup-button{
+  height: 4rem;
+  width: 16rem;
+  padding: 5px;
+  margin-left: 2rem;
+  background-color: #fbcc13;
+  font-weight: bolder;
+  font-size: 2rem;
+  border: 0;
+  border-radius: 6px;
+}
+
+  
