@@ -5,7 +5,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 import { auth } from "../../firebase/firebase.utils";
 
 export const Navbar = ({ history, currentUser }) => {
-  console.log(history);
+  
   return (
     <Router>
       <div className="nav-container">

@@ -1,0 +1,28 @@
+
+.familyFeatured__heading {
+    text-align: center;
+    font-size: 2.8rem;
+    line-height: 3.2rem;
+    margin-bottom: 4rem;
+}
+.familyFeatured__flex-container {
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+   
+    
+    
+}
+
+.familyFeatured__link {
+    margin: 1rem 2rem;
+    font-size: larger;
+    font-weight: 800;
+
+    &:hover {
+        cursor:pointer;
+    }
+}
+.familyFeatured-seperator {
+    font-size: x-large;
+}

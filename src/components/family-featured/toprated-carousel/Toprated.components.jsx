@@ -6,7 +6,7 @@ const key = process.env.REACT_APP_APIKEY;
 
 const TopRated = () => {
   const [toprated, setToprated] = useState([]);
-  const key = process.env.REACT_APP_APIKEY;
+ 
   const settings = {
     dots: true,
     infinite: true,
@@ -30,7 +30,6 @@ const TopRated = () => {
   return (
     <div className="topRated__slider-container">
       <div className="topRated__slider-title">
-        <h1>Top Rated Features</h1>
       </div>
       <Slider {...settings}>
         {toprated.map((item) => (
@@ -41,13 +40,15 @@ const TopRated = () => {
   );
 };
 
-const getMovieImagesFromId = (movieId) => {
-  const url = `https://api.themoviedb.org/3/movie/${movieId}/watch/providers?api_key=${key}`;
-  return fetch(url);
-};
+
 
 const TopRatedMovies = ({ movieItem }) => {
   const [movieImage, setMovieImage] = useState(null);
+
+  const getMovieImagesFromId = (movieId) => {
+    const url = `https://api.themoviedb.org/3/movie/${movieId}/watch/providers?api_key=${key}`;
+    return fetch(url);
+  };
 
   useEffect(() => {
     getMovieImagesFromId(movieItem.id)
