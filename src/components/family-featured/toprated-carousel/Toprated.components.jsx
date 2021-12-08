@@ -29,8 +29,7 @@ const TopRated = () => {
 
   return (
     <div className="topRated__slider-container">
-      <div className="topRated__slider-title">
-      </div>
+      
       <Slider {...settings}>
         {toprated.map((item) => (
           <TopRatedMovies key={item.id} movieItem={item} />

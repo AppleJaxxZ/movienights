@@ -39,13 +39,11 @@ useEffect(() => {
                     <li   className="familyFeatured-seperator">|</li>
                     <li tabIndex="0" onClick={()=> setMovieUrl(`https://api.themoviedb.org/3/discover/movie?api_key=${key}&language=en-US&region=US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres=35&with_watch_monetization_types=flatrate`)} className="familyFeatured__link">Comedy</li>
                     <li   className="familyFeatured-seperator">|</li>
-                    <li tabIndex="0" onClick={()=> setMovieUrl(`https://api.themoviedb.org/3/discover/movie?api_key=${key}&language=en-US&region=US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres=12&with_watch_monetization_types=flatrate`)} className="familyFeatured__link">Adventure</li>
+                    <li  tabIndex="0" onClick={()=> setMovieUrl(`https://api.themoviedb.org/3/discover/movie?api_key=${key}&language=en-US&region=US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres=12&with_watch_monetization_types=flatrate`)} className="familyFeatured__link">Adventure</li>
                 </ul>
             </nav>
 
-            <div className="topRated__slider-container">
-      <div className="topRated__slider-title">
-      </div>
+            <div className="familyFeatured__slider-container">
       <Slider {...settings}>
         {movieData.map((item) => (
           <MovieList key={item.id} movieItem={item} />

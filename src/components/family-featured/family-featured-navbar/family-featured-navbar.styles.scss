@@ -1,4 +1,11 @@
 
+.familyFeatured__slider-container {
+    text-align: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+
 .familyFeatured__heading {
     text-align: center;
     font-size: 2.8rem;
@@ -9,10 +16,14 @@
     display: flex;
     margin: 0 auto;
     justify-content: center;
+    font-size: 1.3rem;
    
-    
-    
 }
+
+.familyFeatured__navContainer {
+    margin-bottom: 4rem;
+}
+
 
 .familyFeatured__link {
     margin: 1rem 2rem;
@@ -24,5 +35,5 @@
     }
 }
 .familyFeatured-seperator {
-    font-size: x-large;
+    font-size: 3rem;
 }
