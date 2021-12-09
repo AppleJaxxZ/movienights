@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import CustomButton from "../custom-button/custom-button.components";
 
 const key = process.env.REACT_APP_APIKEY;
 
@@ -20,7 +21,7 @@ const MovieLinker = ({movieItem}, props) => {
 
 
     return (
-       <div>
+       <div className="todaystopthree__movieLinker-container">
         <a target="_blank" rel="noopener noreferrer" href={movieImage}>
          
             <img
@@ -32,9 +33,9 @@ const MovieLinker = ({movieItem}, props) => {
               alt="movie poster"
               src={`https://image.tmdb.org/t/p/w500${movieItem.backdrop_path}`}
             />
-            <h3 className="posterTitle">{movieItem.title}</h3>
-          
-        </a>
+            <h3 className="movieLinker__posterTitle">{movieItem.title}</h3>
+           </a>
+        <CustomButton title="Rent Now" />
         </div>
       
     )

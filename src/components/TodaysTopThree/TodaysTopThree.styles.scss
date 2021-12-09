@@ -1,10 +1,35 @@
+//for movieLinker component + text overlay
+.todaystopthree__movieLinker-container {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+
+
+
+
+.movieLinker__posterTitle{
+    font-size: 2.5rem;
+    position: absolute;
+    text-decoration: none;
+    color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
 .todaystopthree__container{
     margin: 5rem auto;
+    margin-bottom: 10rem;
 }
 
 .todaystopthree__heading-h1 {
     text-align: center;
     font-size: xx-large;
+   
 }
 
 .todaystopthree__heading-h2 {
@@ -12,6 +37,10 @@
     text-align: center;
 }
 
+.movieLinker__image{
+    opacity: .5;
+    
+}
 
 .todaystopthree__flex-wrapper {
     display: flex;
