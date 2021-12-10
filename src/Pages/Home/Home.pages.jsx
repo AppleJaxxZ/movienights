@@ -6,6 +6,7 @@ import FamilyFeaturedNavigation from "../../components/family-featured/family-fe
 import TodaysTopThree from "../../components/TodaysTopThree/TodaysTopThree.components";
 import InputWatchNow from "../../components/input-watchNow/input-watchnow.components";
 import MockUpDisplay from "../../homepage-mockup-displays/mockupdisplay.components";
+import FaqSection from "../../components/Faq/faq.components";
 const HomePage = () => (
   <div className="homepage">
     <Collage />
@@ -15,6 +16,7 @@ const HomePage = () => (
 <InputWatchNow />
 <TodaysTopThree />
 <MockUpDisplay />
+<FaqSection />
   </div>
 );
 
