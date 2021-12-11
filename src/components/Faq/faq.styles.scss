@@ -22,19 +22,21 @@
  }
 
 
- .faq__div-0 {
+ .faq__div {
     border-bottom: 1px solid #bdbdbd;
+    margin-bottom: 5rem;
  }
 
- .faq__question-0  {
+ .faq__question {
      font-size: 2.5rem;
      font-weight: 600;
      display: flex;
      width: 100%;
+     margin-bottom: 5rem;
      
  }
 
-.faq__question-0::before {
+.faq__question::before {
     display: block;
   background-image: url("../../media/blueDownArrow.png");
   background-repeat: no-repeat;
@@ -46,7 +48,7 @@ min-width: 36px;
   z-index: 10;
  }
 
- .faq__question-0-open::before {
+ .faq__question-open::before {
     display: block;
     background-image: url("../../media/blueDownArrow.png");
     background-repeat: no-repeat;
@@ -61,7 +63,7 @@ min-width: 36px;
 }
  
 
-.faq__question-0-answer {
+.faq__question-answer {
     font-size: 2rem;
 justify-content: start;
 margin-left: 5rem;

@@ -3,7 +3,10 @@ import "./faq.styles.scss";
 
 
 const FaqSection = () => {
-const [isOpen, setIsOpen] = useState(false);
+const [isOpen0, setIsOpen0] = useState(false);
+const [isOpen1, setIsOpen1] = useState(false);
+const [isOpen2, setIsOpen2] = useState(false);
+const [isOpen3, setIsOpen3] = useState(false);
 
 
 
@@ -13,27 +16,27 @@ return (
       <div className="faq__questions-container">
 
           {/* Question #1 */}
-          <div className='faq__div-0'>
-          <span className={isOpen? "faq__question-0" : "faq__question-0 faq__question-0-open"} onClick={()=> setIsOpen(!isOpen)}>Is MovieKnights Really Free?</span>
-          {isOpen && (<p className="faq__question-0-answer faq__question-0-open"> YES!  Ofcoursem, our service will always be free1</p>)}
+          <div className='faq__div'>
+          <span className={isOpen0? "faq__question" : "faq__question faq__question-open"} onClick={()=> setIsOpen0(!isOpen0)}>Is MovieKnights Really Free?</span>
+          {isOpen0 && (<p className="faq__question-answer faq__question-open"> YES!  Ofcoursem, our service will always be free1</p>)}
           </div>
 
            {/* Question #2 */}
-          <div className='faq__div-0'>
-          <span className={isOpen? "faq__question-0" : "faq__question-0 faq__question-0-open"} onClick={()=> setIsOpen(!isOpen)}>Is MovieKnights Really Free?</span>
-          {isOpen && (<p className="faq__question-0-answer faq__question-0-open"> YES!  Ofcoursem, our service will always be free1</p>)}
+          <div className='faq__div'>
+          <span className={isOpen1? "faq__question" : "faq__question faq__question-open"} onClick={()=> setIsOpen1(!isOpen1)}>What is Just Watch?</span>
+          {isOpen1 && (<p className="faq__question-answer faq__question-open"> Just Watch is a movie provider.  It provides a hugle selection of movies to watch by stream, download, rental or purchase.</p>)}
           </div>
 
           {/* Question #3 */}
-          <div className='faq__div-0'>
-          <span className={isOpen? "faq__question-0" : "faq__question-0 faq__question-0-open"} onClick={()=> setIsOpen(!isOpen)}>Is MovieKnights Really Free?</span>
-          {isOpen && (<p className="faq__question-0-answer faq__question-0-open"> YES!  Ofcoursem, our service will always be free1</p>)}
+          <div className='faq__div'>
+          <span className={isOpen2? "faq__question" : "faq__question faq__question-open"} onClick={()=> setIsOpen2(!isOpen2)}>What can I watch with MovieKnight and JustWatch?</span>
+          {isOpen2 && (<p className="faq__question-answer faq__question-open">MovieKnight will provide you the service of finding the movies that Just Watch is hosting.  The movie database used for this app has thousands of movies to choose from!  </p>)}
           </div>
 
           {/* Question #4 */}
-          <div className='faq__div-0'>
-          <span className={isOpen? "faq__question-0" : "faq__question-0 faq__question-0-open"} onClick={()=> setIsOpen(!isOpen)}>Is MovieKnights Really Free?</span>
-          {isOpen && (<p className="faq__question-0-answer faq__question-0-open"> YES!  Ofcoursem, our service will always be free1</p>)}
+          <div className='faq__div'>
+          <span className={isOpen3? "faq__question" : "faq__question faq__question-open"} onClick={()=> setIsOpen3(!isOpen3)}>What devices does MovieKnight support?</span>
+          {isOpen3 && (<p className="faq__question-answer faq__question-open">Right now I this MovieKnight has been built for desktop, mobile, and tablet devices as a PWA or (Progressive Web App).  Other buiklds using React Native may happen in the future.</p>)}
           </div>
 
           
