@@ -1,5 +1,8 @@
 .sign-in {
-    width: 380px;
+  background-color: white;
+    width: 60%;
+    border-radius: 6px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
   
@@ -9,12 +12,75 @@
   
     .buttons {
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
+      flex-direction: column;
+      margin: 1rem auto;
+      width: 95%;
+      text-align: center;
     }
   }
   
   .GoogleBtn {
-    size: 14px;
-    background-color: rgb(3, 3, 226);
+    font-size: 1.4rem;
+    color: white;
+    height: 3.5rem;
+    border: 0;
+    margin: 1.5rem auto;
+    background-color: #128ced;
     font-weight: 900;
+    text-align: center;
+    display: flex;
+padding: .2rem 1rem;
+    align-items: center;
+  }
+
+
+
+  .signUp__newToMovieKnight-container{
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    padding: 2rem 1rem 4rem 1rem;
+  }
+
+  .signUp__new {
+    color: black;
+    }
+    
+  .signUp__forFree {
+    color: #2e88b7 !important;
+    &:hover{
+      cursor:pointer;
+    }
+  }
+  #forFree {
+    color: #2e88b7 !important;
+    padding-left: 1rem;
+  }
+
+  .sign-in__withGoogle-img { 
+    width: 3.5rem;
+    height: auto;
+    padding: .5rem;
+
+  }
+
+
+  #staySignedIn {
+    cursor: pointer;
+    display: inline-block;
+    padding-left: 1.2rem;
+    width: calc(100% - 20px);
+    color: #646669;
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 2rem;
+  }
+  .keepMeSignedIn {
+    height: 20px;
+    vertical-align: text-bottom;
+    width: 20px;
+    text-align: center;
+  margin-top: 2rem;
+  
   }

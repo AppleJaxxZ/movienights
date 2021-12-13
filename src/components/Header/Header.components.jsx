@@ -3,6 +3,7 @@ import "../Header/Header.styles.scss";
 import { withRouter } from "react-router";
 import { BrowserRouter as Router } from "react-router-dom";
 
+
 const Header = ({ history }) => {
   return (
     <Router>
@@ -18,6 +19,7 @@ const Header = ({ history }) => {
           <div className="dot" id="five"></div>
           <div className="dot" id="six"></div>
         </div>
+        
       </div>
     </Router>
   );

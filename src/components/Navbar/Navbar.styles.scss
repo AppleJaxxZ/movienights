@@ -16,9 +16,12 @@
   .signedIn-navbar {
     display: flex;
     justify-content: space-evenly;
-    &li:hover {
-      cursor: pointer;
-    }
+    
+  }
+
+
+  li:hover {
+cursor: pointer;
   }
   
   .signInSignUp {
