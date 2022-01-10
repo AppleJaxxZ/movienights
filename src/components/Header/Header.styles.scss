@@ -20,6 +20,8 @@
   animation: ani 2s infinite;
   -webkit-animation: ani 2s infinite;
   position: relative;
+  display: flex;
+  justify-content: space-between;
   &:hover {
     cursor: pointer;
   }
@@ -84,3 +86,28 @@
     display: none;
   }
 }
+
+.signInAndOut {
+  display: block;
+margin-right: 5rem;
+
+
+padding: 1rem 1.2rem;
+font-weight: bold;
+text-align: center;
+align-self: center;
+font-size: 1.4rem;
+}
+
+.signIn-signOut-container{
+
+ display: flex;
+ flex-direction: row;
+  
+}
+
+.signUp-header {
+  
+  margin-top: 3rem;
+}
+

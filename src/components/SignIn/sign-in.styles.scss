@@ -1,6 +1,6 @@
 .sign-in {
   background-color: white;
-    width: 60%;
+    width: 70%;
     border-radius: 6px;
     margin: 0 auto;
     display: flex;
@@ -17,6 +17,7 @@
       margin: 1rem auto;
       width: 95%;
       text-align: center;
+      
     }
   }
   
@@ -45,6 +46,9 @@ padding: .2rem 1rem;
 
   .signUp__new {
     color: black;
+    margin-left: 2rem;
+    font-weight: 600;
+    font-size: 1.6rem;
     }
     
   .signUp__forFree {

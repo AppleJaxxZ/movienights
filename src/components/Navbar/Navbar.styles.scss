@@ -16,6 +16,7 @@
   .signedIn-navbar {
     display: flex;
     justify-content: space-evenly;
+    justify-items: center;
     
   }
 
@@ -40,6 +41,20 @@ cursor: pointer;
     &:hover {
       cursor: pointer;
     }
+  }
+
+  .signOut-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+  }
+
+  #signout-signedin {
+   margin-bottom: 5rem;
+  
+  
   }
   
   @media screen and (max-width: 480px) {

@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import "./faq.styles.scss";
-import MovieLinker from '../TodaysTopThree/TodaysTopThree.movielinker';
+
 
 
 const FaqSection = () => {

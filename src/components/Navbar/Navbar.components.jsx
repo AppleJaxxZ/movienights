@@ -2,14 +2,17 @@ import React from "react";
 import "../Navbar/Navbar.styles.scss";
 import { withRouter } from "react-router-dom";
 import { BrowserRouter as Router } from "react-router-dom";
-import { auth } from "../../firebase/firebase.utils";
-import Header from "../Header/Header.components"
+
+// import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import { connect } from 'react-redux';
+import { createStructuredSelector } from "reselect";
+import { selectCurrentUser } from "../../Redux/user/user.selectors";
+
 
 export const Navbar = ({ history, currentUser }) => {
-  
+
   return (
     <Router>
-       <Header />
       <div className="nav-container">
         <ul className="flex-navlist">
           {currentUser ? (
@@ -18,17 +21,9 @@ export const Navbar = ({ history, currentUser }) => {
               <li id="trending-signedin" onClick={() => history.push("/trending")}>Trending</li>
               <li id="upcoming-signedin" onClick={() => history.push("/upcomming")}>Upcoming</li>
               <li id="tvshows-signedin">TV Shows</li>
-              <li id="signout-signedin" className="option" onClick={() => auth.signOut()}>
-                SIGN OUT
-              </li>
             </ul>
           ) : (
-            <li
-              className="signInSignUp"
-              onClick={() => history.push("/SignInAndSignUp")}
-            >
-              SIGN IN / SIGN UP
-            </li>
+            ""
           )}
         </ul>
       </div>
@@ -36,4 +31,8 @@ export const Navbar = ({ history, currentUser }) => {
   );
 };
 
-export default withRouter(Navbar);
+const mapStateToProps = createStructuredSelector({
+  currentUser: selectCurrentUser
+})
+
+export default withRouter(connect(mapStateToProps)(Navbar));
