@@ -22,7 +22,7 @@ const MovieLinker = ({ movieItem }, props) => {
 
   return (
     <div className="todaystopthree__movieLinker-container">
-      <a target="_blank" rel="noopener noreferrer" href={movieImage}>
+      <a target="_blank" key={movieImage} rel="noopener noreferrer" href={movieImage}>
 
         <img
           id={props.number}
@@ -34,7 +34,7 @@ const MovieLinker = ({ movieItem }, props) => {
           alt="movie poster"
           src={`https://image.tmdb.org/t/p/w500${movieItem.backdrop_path}`}
         />
-        <h3 className="movieLinker__posterTitle">{movieItem.title}</h3>
+        <h3 className="movieLinker__posterTitle" key={movieItem.title}>{movieItem.title} </h3>
       </a>
       <CustomButton title="Rent Now" />
     </div>

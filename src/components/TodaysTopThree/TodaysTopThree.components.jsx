@@ -17,7 +17,7 @@ const TodaysTopThree = () => {
       .catch((error) => {
         console.log("Error!! Top Rated data interrupted!:", error);
       });
-  });
+  }, [topthreeUrl]);
 
   return (
     <div className="todaystopthree__container">
@@ -27,7 +27,7 @@ const TodaysTopThree = () => {
       </div>
       <ul className="todaystopthree__flex-wrapper">
         {movieData.slice(0, 3).map((item, index) => (
-          <li className="todaystopthree__list-item" ><MovieLinker number={index} key={item.id} movieItem={item} /></li>
+          <li className="todaystopthree__list-item" key={index} ><MovieLinker number={index} key={item.id} movieItem={item} /></li>
         ))}
 
       </ul>
