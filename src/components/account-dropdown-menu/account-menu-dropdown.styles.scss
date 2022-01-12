@@ -7,7 +7,11 @@
     flex-direction: column;
     padding: 20px;
     border: 0px solid white;
-    background-color: #353536;
+  
+    background: #353536;
+    background: -moz-linear-gradient(top, #353536 0%, #6B6B6F 98%, #7E7E7E 100%);
+    background: -webkit-linear-gradient(top, #353536 0%, #6B6B6F 98%, #7E7E7E 100%);
+    background: linear-gradient(to bottom, #353536 0%, #6B6B6F 98%, #7E7E7E 100%);
     top: 5.5rem;
     right: 60px;
     z-index: 7;
@@ -18,6 +22,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    color: white;
     
   
    

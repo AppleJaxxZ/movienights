@@ -1,8 +1,11 @@
+$tablet-break-point: 768px;
+
+
 .sign-in-and-sign-up {
-    width: 100.5rem;
+    width: 100%;
     display: flex;
     justify-content: space-between;
-    margin: 3rem auto;
+   
     background-color: 
     #e7e7e7;
     padding: 3rem;
@@ -11,10 +14,45 @@
   .sign-in-header {
     color: white;
     font-size: 5.6rem;
+    font-weight: 700;
+   background-color: black;
+   min-height: 6rem;
+  
    
-   justify-content: center;
+  align-items: center;
     display:flex;
+
+    @media screen and (min-width: 676px) {
+      min-height: 10rem;
+    }
+  
+    @media screen and (min-width: 1025px){
+    min-height: 15rem;
+}   
+
+    
+    }
+
+    
+
+  
+  .sign-in-header-text {
+    margin-left: 5rem;
+    font-size: 7.2rem;
+
+    @media screen and (max-width: 1025px) {
+       font-size: 3.6rem;
+      
+    }
+    @media screen and (max-width: 767px) {
+      font-size: 2rem;
+     
+   }
+
+
+    
   }
+  
   
   @media screen and (max-width: 885px) {
     .sign-in-and-sign-up {

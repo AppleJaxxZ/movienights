@@ -7,16 +7,18 @@ import TodaysTopThree from "../../components/TodaysTopThree/TodaysTopThree.compo
 import InputWatchNow from "../../components/input-watchNow/input-watchnow.components";
 import MockUpDisplay from "../../homepage-mockup-displays/mockupdisplay.components";
 import FaqSection from "../../components/Faq/faq.components";
+import Header from '../../components/Header/Header.components'
 const HomePage = () => (
   <div className="homepage">
+    <Header />
     <Collage />
-<PriceTableHeading />
-<PriceTable />
-<FamilyFeaturedNavigation />
-<InputWatchNow />
-<TodaysTopThree />
-<MockUpDisplay />
-<FaqSection />
+    <PriceTableHeading />
+    <PriceTable />
+    <FamilyFeaturedNavigation />
+    <InputWatchNow />
+    <TodaysTopThree />
+    <MockUpDisplay />
+    <FaqSection />
   </div>
 );
 

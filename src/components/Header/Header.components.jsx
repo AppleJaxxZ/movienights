@@ -9,13 +9,11 @@ import { auth } from "../../firebase/firebase.utils";
 import { selectMenuHidden } from "../../Redux/dropdown-menu/dropdown-menu.selectors";
 import { toggleDropDownMenuHidden } from "../../Redux/dropdown-menu/dropdown-menu.actions";
 
-import AccountIcon from "../account-icon/account-icon.component";
-import AccountDropdown from "../account-dropdown-menu/account-dropdown-menu.component";
 
 
 
 
-const Header = ({ history, currentUser, hidden, toggleDropDownMenuHidden }) => {
+const Header = ({ history, currentUser }) => {
   return (
     <Router>
       <div className="header-container">
@@ -46,9 +44,6 @@ const Header = ({ history, currentUser, hidden, toggleDropDownMenuHidden }) => {
               >
                 Sign In
               </span>
-                <AccountIcon />
-                {hidden ? null : (<AccountDropdown />)}
-
               </div>)
 
           }

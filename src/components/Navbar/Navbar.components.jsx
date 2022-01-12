@@ -13,20 +13,19 @@ export const Navbar = ({ history, currentUser }) => {
 
   return (
     <Router>
-      <div className="nav-container">
-        <ul className="flex-navlist">
-          {currentUser ? (
+      {currentUser ? (
+        <div className="nav-container">
+          <ul className="flex-navlist">
             <ul className="signedIn-navbar">
               <li id="search-signedin" onClick={() => history.push("/search")}>Search</li>
               <li id="trending-signedin" onClick={() => history.push("/trending")}>Trending</li>
               <li id="upcoming-signedin" onClick={() => history.push("/upcomming")}>Upcoming</li>
               <li id="tvshows-signedin">TV Shows</li>
             </ul>
-          ) : (
-            ""
-          )}
-        </ul>
-      </div>
+          </ul>
+        </div>
+      ) : (""
+      )}
     </Router>
   );
 };

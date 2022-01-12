@@ -54,7 +54,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <Header currentUser={this.props.currentUser} />
+        {/* <Header currentUser={this.props.currentUser} /> */}
         <Navbar currentUser={this.props.currentUser} />
 
         <Switch>

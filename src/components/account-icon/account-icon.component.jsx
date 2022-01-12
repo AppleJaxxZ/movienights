@@ -2,14 +2,13 @@ import React from 'react';
 import './account-icon.styles.scss'
 import { connect } from 'react-redux'
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
-import AccountDropdown from '../account-dropdown-menu/account-dropdown-menu.component';
 import { toggleDropDownMenuHidden } from '../../Redux/dropdown-menu/dropdown-menu.actions';
 
 const AccountIcon = ({ toggleDropDownMenuHidden }) => {
 
     return (
-        <div className='accountIcon'>
-            <AccountCircleIcon onClick={toggleDropDownMenuHidden} className="circleIcon-header" sx={{ fontSize: 20 }} />
+        <div className='accountIcon' onClick={toggleDropDownMenuHidden}>
+            <AccountCircleIcon className="circleIcon-header" sx={{ fontSize: 20 }} />
 
 
         </div>
