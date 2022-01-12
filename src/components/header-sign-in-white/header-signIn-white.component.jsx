@@ -45,7 +45,7 @@ const HeaderSignInWhite = ({ history, currentUser, hidden, toggleDropDownMenuHid
                                     className="white__signUp-header"
                                     onClick={() => history.push("/SignInAndSignUp")}
                                 >
-                                    Sign In
+                                    Join MovieKnight
                                 </span>
                                 <AccountIcon />
                                 {hidden ? null : (<AccountDropdown />)}
