@@ -64,6 +64,9 @@ padding: .2rem 1rem;
   #forFree {
     color: #2e88b7 !important;
     padding-left: 1rem;
+    &:hover{
+      cursor:pointer;
+    }
   }
 
   .sign-in__withGoogle-img { 

@@ -8,9 +8,8 @@ import SearchPage from "./Pages/Search/Search.pages";
 import UpcommingPage from "./Pages/Upcomming/Upcomming.page";
 import HomePage from "./Pages/Home/Home.pages";
 import SignInAndSignUpPage from "./Pages/SignInAndSignUp/SignInAndSignUpPage.components";
-import SignUp from "./components/SignUp/sign-up.components";
-import SignIn from "./components/SignIn/sign-in.components"
-import Header from './components/Header/Header.components'
+import SignUpPage from "./Pages/signup/signup-page.component";
+
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect'
 
@@ -71,7 +70,7 @@ class App extends React.Component {
           <Route
             exact
             path="/signup"
-            component={SignUp}
+            component={SignUpPage}
           />
         </Switch>
       </div>

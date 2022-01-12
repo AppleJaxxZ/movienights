@@ -53,7 +53,7 @@
     font-size: 2rem;
     line-height: 18px;
     width: 39rem;
-    height: 5rem;
+    height: auto;
     border: 0;
     outline: none;
    
@@ -72,4 +72,7 @@
   border-radius: 6px;
 }
 
-  
+  .collage__underInput-text {
+    font-size: 2.6rem;
+    margin-top: -2rem;
+  }

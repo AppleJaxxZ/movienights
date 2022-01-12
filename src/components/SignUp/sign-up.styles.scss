@@ -1,8 +1,14 @@
 .sign-up {
     display: flex;
     flex-direction: column;
-    width: 380px;
-    margin-top: 10px;
+    width: 50%;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: .6rem;
+
+    @media screen and (max-width: 741px) {
+      width: 90%;
+    }
   
     .title {
       margin: 10px 0;
@@ -14,4 +20,57 @@
     color: black;
     border: none;
     border-radius: 8px;
+       margin: 1rem auto;
+        width: 95%;
+        text-align: center;
   }
+
+  .sign-in {
+    background-color: white;
+      width: 50%;
+      border-radius: 6px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+  
+      @media screen and (max-width: 741px) {
+        width: 90%;
+      }
+    
+      .title {
+        margin: 10px 0;
+      }
+    
+      .buttons {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin: 1rem auto;
+        width: 95%;
+        text-align: center;
+        
+      }
+    }
+      
+    .signUp__forFree {
+      color: #2e88b7 !important;
+      &:hover{
+        cursor:pointer;
+      }
+    }
+    #forFree {
+      color: #2e88b7 !important;
+      padding-left: 1rem;
+      &:hover{
+        cursor:pointer;
+      }
+    }
+
+    .iUnderstand {
+      font-size: 1rem;
+      color: black;
+      z-index: 10;
+      padding: 1rem;
+    }
+  
+  

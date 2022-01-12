@@ -87,8 +87,9 @@ class SignUp extends React.Component {
             required
           />
           <CustomButton id="signUpbtn" type="submit">
-            SIGN UP
+            Create Account
           </CustomButton>
+          <span className='iUnderstand'>I understand that MovieKnight Universal might send me marketing messages. By creating an account, I agree to the <u>Terms of Use</u> and <u>Privacy Policy </u>.</span>
         </form>
       </div>
     );
