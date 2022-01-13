@@ -16,6 +16,17 @@ class SignUp extends React.Component {
     };
   }
 
+
+  componentDidMount = () => {
+    if (localStorage.getItem('email').length > 0) {
+      this.setState({ email: localStorage.getItem('email') })
+    } else {
+      this.setState({ email: '' })
+    }
+
+  }
+
+
   handleSubmit = async (event) => {
     event.preventDefault();
     const { displayName, email, password, confirmPassword } = this.state;
