@@ -23,6 +23,7 @@ export const Navbar = ({ history, currentUser }) => {
               <li id="tvshows-signedin">TV Shows</li>
             </ul>
           </ul>
+
         </div>
       ) : (""
       )}

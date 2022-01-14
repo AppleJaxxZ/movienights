@@ -1,5 +1,5 @@
 import React from "react";
-import './header-signin-white.styles.scss'
+import './headerAccountPage.styles.scss'
 
 import { connect } from 'react-redux'
 import { createStructuredSelector } from "reselect";
@@ -15,14 +15,14 @@ import AccountDropdown from "../account-dropdown-menu/account-dropdown-menu.comp
 
 
 
-const HeaderSignInWhite = ({ history, currentUser, hidden }) => {
+const HeaderAccountPage = ({ history, currentUser, hidden, }) => {
     return (
         <Router>
-            <div className="white__header-container">
-                <h1 onClick={() => history.push("/")} className="white__header">
+            <div className="account__header-container">
+                <h1 onClick={() => history.push("/")} className="account__header">
                     Movie Knight
                 </h1>
-                <div className="white__header__dots-flexed">
+                <div className="account__header__dots-flexed">
                     <div className="dot" id="one"></div>
                     <div className="dot" id="two"></div>
                     <div className="dot" id="three"></div>
@@ -31,21 +31,21 @@ const HeaderSignInWhite = ({ history, currentUser, hidden }) => {
                     <div className="dot" id="six"></div>
                 </div>
 
-                <div className='white__signInAndOut'>
+                <div className='account__signInAndOut'>
                     {currentUser ?
-                        (<div className="white__signOut-header" onClick={() => auth.signOut()}>
+                        (<div className="account__signOut-header" onClick={() => auth.signOut()}>
 
                             SIGN OUT
                         </div>)
                         :
 
                         (
-                            <div className='white__signIn-signOut-container'>
+                            <div className='account__signIn-signOut-container'>
                                 <span
-                                    className="white__signUp-header"
+                                    className="account__signUp-header"
                                     onClick={() => history.push("/signinandsignup")}
                                 >
-                                    Join MovieKnight
+                                    Watch MovieKnight
                                 </span>
                                 <AccountIcon />
                                 {hidden ? null : (<AccountDropdown />)}
@@ -66,5 +66,4 @@ const mapStateToProps = createStructuredSelector({
 })
 
 
-
-export default withRouter(connect(mapStateToProps)(HeaderSignInWhite));
+export default withRouter(connect(mapStateToProps)(HeaderAccountPage));

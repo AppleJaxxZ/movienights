@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
 import { Switch, Route, Redirect } from "react-router-dom";
+import { BrowserRouter as Router } from 'react-router-dom'
 import Navbar from "./components/Navbar/Navbar.components";
 
 import TrendingPage from "./Pages/Trending/Trending.page";
@@ -9,6 +10,7 @@ import UpcommingPage from "./Pages/Upcomming/Upcomming.page";
 import HomePage from "./Pages/Home/Home.pages";
 import SignInAndSignUpPage from "./Pages/SignInAndSignUp/SignInAndSignUpPage.components";
 import SignUpPage from "./Pages/signup/signup-page.component";
+import AccountPage from './Pages/Account/account-page.component';
 
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect'
@@ -16,6 +18,7 @@ import { createStructuredSelector } from 'reselect'
 import { createUserProfileDocument, auth } from "./firebase/firebase.utils";
 import { setCurrentUser } from './Redux/user/user.actions';
 import { selectCurrentUser } from './Redux/user/user.selectors'
+
 
 
 class App extends React.Component {
@@ -61,6 +64,7 @@ class App extends React.Component {
           <Route path="/trending" component={TrendingPage} />
           <Route path="/upcomming" component={UpcommingPage} />
           <Route exact path="/search" component={SearchPage} />
+
           <Route
             exact
             path="/signinandsignup"
@@ -72,7 +76,10 @@ class App extends React.Component {
             path="/signup"
             component={SignUpPage}
           />
+          <Route path="/accountpage" component={AccountPage} />
+
         </Switch>
+
       </div>
     );
   }

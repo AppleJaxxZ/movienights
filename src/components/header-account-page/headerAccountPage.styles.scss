@@ -1,0 +1,100 @@
+   
+.account__header {
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
+    font-weight: bolder;
+    font-size: 2rem;
+    padding-bottom: 1rem;
+    margin-left: 2rem;
+    margin-bottom: .5rem;
+    background-color: none;
+    color: white;
+  }
+  
+  .account__header-container {
+    height: 6rem;
+    background-color: black;
+    width: 100%;
+  
+    
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  
+  .account__header__dots-flexed {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 14.5rem;
+    top: 1rem;
+  }
+  
+  .account__dot {
+    width: 0.41rem;
+    margin: 0.1rem;
+    height: 0.41rem;
+    border: none;
+    border-radius: 50%;
+    display: inline-block;
+  
+    &#one {
+      background-color: #fccc12;
+    }
+    &#two {
+      background-color: #ff7112;
+    }
+    &#three {
+      background-color: #ef1541;
+    }
+    &#four {
+      background-color: #6e55dc;
+    }
+    &#five {
+      background-color: #0000e9;
+    }
+    &#six {
+      background-color: #05ac3f;
+    }
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  .account__signInAndOut {
+    display: block;
+  margin-right: 5rem;
+  
+  color: white;
+  padding: 1rem 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  align-self: center;
+  font-size: 1.4rem;
+  }
+  
+  .account__signIn-signOut-container{
+  background-color: black;
+   display: flex;
+   flex-direction: row;
+   height: 6rem;
+    
+  }
+  
+  .account__signUp-header {
+    border: none;
+   color: white;
+    padding: .5rem 1.1rem;
+    line-height: 2.4rem;
+    font-size: 1.4rem;
+    margin-top: 1.5rem;
+  }
+  
+  
