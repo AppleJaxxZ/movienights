@@ -48,7 +48,7 @@ const HeaderSignInWhite = ({ history, currentUser, hidden }) => {
                                     Join MovieKnight
                                 </span>
                                 <AccountIcon />
-                                {hidden ? null : (<AccountDropdown />)}
+                                {hidden ? null : (<AccountDropdown history={history} />)}
 
                             </div>)
 

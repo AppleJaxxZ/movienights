@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
-import { Switch, Route, Redirect } from "react-router-dom";
-import { BrowserRouter as Router } from 'react-router-dom'
+import { Switch, Route, Redirect, useHistory, withRouter } from "react-router-dom";
+
 import Navbar from "./components/Navbar/Navbar.components";
 
 import TrendingPage from "./Pages/Trending/Trending.page";
@@ -12,12 +12,16 @@ import SignInAndSignUpPage from "./Pages/SignInAndSignUp/SignInAndSignUpPage.com
 import SignUpPage from "./Pages/signup/signup-page.component";
 import AccountPage from './Pages/Account/account-page.component';
 
+
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect'
 
 import { createUserProfileDocument, auth } from "./firebase/firebase.utils";
 import { setCurrentUser } from './Redux/user/user.actions';
 import { selectCurrentUser } from './Redux/user/user.selectors'
+import HeaderSignInWhite from './components/header-sign-in-white/header-signIn-white.component';
+import WhoIsWatching from "./Pages/whos-watching/who-is-watching-page.component"
+
 
 
 
@@ -26,6 +30,8 @@ class App extends React.Component {
 
   componentDidMount() {
     const { setCurrentUser } = this.props;
+
+
     console.log(this.props.currentUser)
 
     this.unsubscribeFromAuth = auth.onAuthStateChanged(async userAuth => {
@@ -53,30 +59,36 @@ class App extends React.Component {
   componentWillUnmount() {
     this.unsubscribeFromAuth();
   }
+
+
   render() {
     return (
       <div className="App">
         {/* <Header currentUser={this.props.currentUser} /> */}
-        <Navbar currentUser={this.props.currentUser} />
+        {/* <Navbar currentUser={this.props.currentUser} /> */}
+
+
 
         <Switch>
+
           <Route exact path="/" component={HomePage} />
-          <Route path="/trending" component={TrendingPage} />
-          <Route path="/upcomming" component={UpcommingPage} />
+          <Route exact path="/trending" component={TrendingPage} />
+          <Route exact path="/upcomming" component={UpcommingPage} />
           <Route exact path="/search" component={SearchPage} />
 
+          <Route exact path='/whoswatching' component={WhoIsWatching} />
           <Route
             exact
             path="/signinandsignup"
-
-            render={() => this.props.currentUser ? (<Redirect to="/" />) : (<SignInAndSignUpPage />)}
+            component={SignInAndSignUpPage}
           />
           <Route
             exact
             path="/signup"
             component={SignUpPage}
           />
-          <Route path="/accountpage" component={AccountPage} />
+          <Route exact path="/accountpage" component={AccountPage} />
+
 
         </Switch>
 
@@ -93,4 +105,4 @@ const mapDispatchToProps = dispatch => ({
   setCurrentUser: user => dispatch(setCurrentUser(user))
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App));

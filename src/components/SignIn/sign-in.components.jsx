@@ -29,7 +29,7 @@ class SignIn extends React.Component {
       await auth.signInWithEmailAndPassword(email, password);
       this.setState({ email: "", password: "" });
       alert('You have successfully logged in!');
-      this.props.history.push("/SearchPage");
+      this.props.history.push("/whoswatching");
     } catch (error) {
       alert("The email or password provided did not match our database.  Please try again or click sign up.")
       console.log(error);

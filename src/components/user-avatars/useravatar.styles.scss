@@ -1,0 +1,57 @@
+$--background-top: #110d43;
+
+$--background-left: #1c156c;
+
+.avatarImage {
+    width: 15rem;
+  position: absolute; 
+  bottom: -.06rem;
+  right: .1rem;
+
+  &:hover {
+cursor:pointer;
+  }
+    
+   
+}
+
+.avatar-background {
+    background-color: #161616;
+    border-radius: 50%;
+    width: 15rem;
+    height: 15rem;
+    position: relative;
+    transition: .3s;
+    &:hover {
+        cursor:pointer;
+        transform: scale(1.5);
+        
+    }
+}
+
+
+.avatarContainer {
+  display: flex;
+  flex-direction: column;
+ text-align: center;
+}
+
+
+.avatarName {
+  position: absolute;
+  font-size: 1.5rem;
+  font-weight: bolder;
+  top: 17rem;
+  right: 4rem;
+ 
+}
+
+.avatar__edit-icon {
+position: absolute;
+top: 22rem;
+right: 6rem;
+}
+
+.icon {
+  background: none;
+}

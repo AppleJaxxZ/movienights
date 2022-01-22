@@ -2,12 +2,14 @@ import React from 'react';
 import './account-menu-dropdown.styles.scss'
 
 
-import { withRouter } from "react-router-dom";
+
+
 import { BrowserRouter as Router } from "react-router-dom";
 
 
 
 const AccountDropdown = ({ history }) => {
+    console.log(history, "DropDown Component History")
 
 
     return (
@@ -24,4 +26,4 @@ const AccountDropdown = ({ history }) => {
     )
 }
 
-export default withRouter(AccountDropdown);
+export default AccountDropdown;

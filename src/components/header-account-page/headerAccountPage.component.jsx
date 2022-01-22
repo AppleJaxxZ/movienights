@@ -16,6 +16,7 @@ import AccountDropdown from "../account-dropdown-menu/account-dropdown-menu.comp
 
 
 const HeaderAccountPage = ({ history, currentUser, hidden, }) => {
+    console.log(history, "from Header of accountPage")
     return (
         <Router>
             <div className="account__header-container">
@@ -48,7 +49,7 @@ const HeaderAccountPage = ({ history, currentUser, hidden, }) => {
                                     Watch MovieKnight
                                 </span>
                                 <AccountIcon />
-                                {hidden ? null : (<AccountDropdown />)}
+                                {hidden ? null : (<AccountDropdown history={history} />)}
 
                             </div>)
 

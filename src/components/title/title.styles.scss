@@ -1,0 +1,64 @@
+.header {
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
+    font-weight: bolder;
+    font-size: 2rem;
+    padding-bottom: 1rem;
+    margin-left: 2rem;
+    margin-bottom: .5rem;
+    background-color: none;
+  }
+  
+  .header-container {
+    height: 3rem;
+    margin-bottom: 5rem;
+    transform: rotateX(0deg) rotateZ(0deg);
+    transform-style: preserve-3d;
+    box-shadow: 0px 0px 0 0px #f9f9fb, -1px 0 28px 0 rgba(34, 33, 81, 0.01),
+      28px 28px 28px 0 rgba(34, 33, 81, 0.25);
+    transition: 0.4s ease-in-out transform, 0.4s ease-in-out box-shadow;
+    animation: ani 2s infinite;
+    -webkit-animation: ani 2s infinite;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  
+  .header__dots-flexed {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 14.5rem;
+    top: .5rem;
+  }
+  
+  .dot {
+    width: 0.45rem;
+    margin: 0.1rem;
+    height: 0.45rem;
+    border: none;
+    border-radius: 50%;
+    display: inline-block;
+  
+    &#one {
+      background-color: #fccc12;
+    }
+    &#two {
+      background-color: #ff7112;
+    }
+    &#three {
+      background-color: #ef1541;
+    }
+    &#four {
+      background-color: #6e55dc;
+    }
+    &#five {
+      background-color: #0000e9;
+    }
+    &#six {
+      background-color: #05ac3f;
+    }
+  }
