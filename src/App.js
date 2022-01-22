@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 
 import './App.css';
-import { Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import TrendingPage from './Pages/Trending/Trending.page';
 import SearchPage from './Pages/Search/Search.pages';
@@ -43,17 +43,23 @@ const App = () => {
 
   return (
     <div className="App">
-      <Switch>
-        <Route exact path="/" component={HomePage} />
-        <Route exact path="/trending" component={TrendingPage} />
-        <Route exact path="/upcomming" component={UpcommingPage} />
-        <Route exact path="/search" component={SearchPage} />
+      <Router>
+        <Switch>
+          <Route exact path="/" component={HomePage} />
+          <Route exact path="/trending" component={TrendingPage} />
+          <Route exact path="/upcomming" component={UpcommingPage} />
+          <Route exact path="/search" component={SearchPage} />
 
-        <Route exact path="/whoswatching" component={WhoIsWatching} />
-        <Route exact path="/signinandsignup" component={SignInAndSignUpPage} />
-        <Route exact path="/signup" component={SignUpPage} />
-        <Route exact path="/accountpage" component={AccountPage} />
-      </Switch>
+          <Route exact path="/whoswatching" component={WhoIsWatching} />
+          <Route
+            exact
+            path="/signinandsignup"
+            component={SignInAndSignUpPage}
+          />
+          <Route exact path="/signup" component={SignUpPage} />
+          <Route exact path="/accountpage" component={AccountPage} />
+        </Switch>
+      </Router>
     </div>
   );
 };
